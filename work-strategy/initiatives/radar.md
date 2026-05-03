@@ -40,6 +40,9 @@ An internal analytics research and knowledge system that ingests data assets, de
 - Proven reliability metrics
 - Expanded real-world use cases
 
+## Complementary Source Files
+- `work-strategy/radar/external-peer-practice-scan.md` — external financial-services and adjacent-industry peer-practice scan; compares Radar to real-world analogs and captures innovation/risk assessment.
+
 ## Explicit Non-Goals / Boundaries
 - Not yet production-ready
 - Not yet broadly rolled out
