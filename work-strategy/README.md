@@ -10,6 +10,29 @@ When starting a new chat session, the user can say:
 
 The assistant should then use this file as the bootstrap entry point and read the project files in the order below before offering strategic or technical advice.
 
+## Maintenance Command
+
+When the user says:
+
+> update project files
+
+The assistant should handle back-end project maintenance without requiring the user to specify each file.
+
+Default maintenance behavior:
+
+1. Review the current conversation for durable context, decisions, risks, open questions, and state changes.
+2. Update `PROJECT_STATE.md` when the current source-of-truth summary has changed.
+3. Append to `SESSION_LOG.md` for meaningful sessions, context additions, or project evolution.
+4. Add or update entries in `DECISION_LOG.md` when a decision has been made, accepted, reversed, or materially reframed.
+5. Update `OPEN_QUESTIONS.md` when new unresolved questions emerge or existing questions are resolved.
+6. Update `RISKS_AND_TENSIONS.md` when durable tensions, tradeoffs, or failure modes become clear.
+7. Update initiative, Radar, team, or stakeholder files when the conversation materially changes those domains.
+8. Preserve existing structure and avoid unnecessary churn.
+9. Prefer concise, curated state over transcripts or bloated notes.
+10. Tell the user what was changed after the updates are complete.
+
+The user should not need to manage file-level hygiene manually unless they explicitly want to.
+
 ## Bootstrap Read Order
 
 1. `PROJECT_STATE.md` — current source-of-truth summary.
